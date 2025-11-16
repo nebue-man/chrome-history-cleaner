@@ -1,15 +1,17 @@
 {
   "manifest_version": 3,
   "name": "Site History Cleaner",
-  "version": "1.0.0",
-  "description": "Clear browsing history for specific websites",
+  "version": "2.0.0",
+  "description": "Clear browsing history for specific websites with scheduled auto-clearing",
   "permissions": [
     "history",
-    "browsingData"
+    "alarms",
+    "storage",
+    "notifications"
   ],
-  "host_permissions": [
-    "<all_urls>"
-  ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
     "default_popup": "popup.html"
   }
